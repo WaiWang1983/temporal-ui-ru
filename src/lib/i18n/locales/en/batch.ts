@@ -1,23 +1,25 @@
 export const Namespace = 'batch' as const;
 
 export const Strings = {
-  'nav-title': 'Batch',
-  'list-page-title': 'Batch Operations',
-  'describe-page-title': 'Batch Operation',
-  'empty-state-title': 'No Batch Operations',
-  'back-link': 'Back to Batch Operations',
-  'operation-type': 'Operation Type',
-  details: 'Operation Details',
-  identity: 'Identity',
-  'total-operations': 'Total Operations',
-  'operations-failed': '{{ count, number }} failed',
-  'operations-succeeded': '{{ count, number }} succeeded',
-  'operations-progress': '{{ percent }}% complete',
-  results: 'Operation Results',
-  'max-concurrent-alert-title': 'Maximum concurrent Batch Operations met',
+  'nav-title': 'Пакетные операции',
+  'list-page-title': 'Пакетные операции',
+  'describe-page-title': 'Пакетная операция',
+  'empty-state-title': 'Пакетные операции отсутствуют',
+  'back-link': 'Назад к пакетным операциям',
+  'operation-type': 'Тип операции',
+  details: 'Детали операции',
+  identity: 'Идентификатор',
+  'total-operations': 'Всего операций',
+  'operations-failed': '{{ count, number }} не выполнено',
+  'operations-succeeded': '{{ count, number }} выполнено успешно',
+  'operations-progress': '{{ percent }}% выполнено',
+  results: 'Результаты операции',
+  'max-concurrent-alert-title':
+    'Достигнуто максимальное количество одновременных пакетных операций',
   'max-concurrent-alert-description':
-    'Only 1 in progress Batch Operation is permitted. If you are attempting to create a new Batch Operation while there is one currently running, it will fail.',
+    'Разрешена только 1 пакетная операция в процессе выполнения. Если вы пытаетесь создать новую, пока предыдущая выполняется, она завершится с ошибкой.',
   'job-id-input-hint':
-    'Job ID must be unique. If left blank, a randomly generated UUID will be used.',
-  'job-id-input-error': 'Job ID must only contain URL safe characters',
+    'Идентификатор задания должен быть уникальным. Если оставить поле пустым, будет сгенерирован случайный UUID.',
+  'job-id-input-error':
+    'Идентификатор задания может содержать только URL-безопасные символы',
 } as const;

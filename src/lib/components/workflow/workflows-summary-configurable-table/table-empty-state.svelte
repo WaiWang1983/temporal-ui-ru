@@ -2,7 +2,6 @@
   import { page } from '$app/stores';
 
   import Alert from '$lib/holocene/alert.svelte';
-  import Link from '$lib/holocene/link.svelte';
   import { translate } from '$lib/i18n/translate';
   import { workflowError } from '$lib/stores/workflows';
   import { useDarkMode } from '$lib/utilities/dark-mode';
@@ -12,15 +11,6 @@
   $: query = $page.url.searchParams.get('query');
 
   $: noResultsImages = $useDarkMode ? emptyImageDark : emptyImageLight;
-
-  const samples = [
-    'samples-go',
-    'samples-java',
-    'samples-typescript',
-    'samples-python',
-    'samples-dotnet',
-    'samples-php',
-  ];
 </script>
 
 <svelte:head>
@@ -61,21 +51,7 @@
       <slot name="cloud" />
       <p>
         {translate('workflows.workflow-empty-state-description')}
-        <Link newTab href="https://github.com/temporalio"
-          >github.com/temporalio</Link
-        >.
       </p>
-      <ul class="flex flex-col gap-2">
-        {#each samples as sample}
-          <li>
-            <Link
-              icon="github"
-              newTab
-              href="https://github.com/temporalio/{sample}">{sample}</Link
-            >
-          </li>
-        {/each}
-      </ul>
     {/if}
   </div>
   <div

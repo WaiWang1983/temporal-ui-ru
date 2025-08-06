@@ -1,37 +1,38 @@
-export const Namespace = 'codec-server';
+export const Namespace = 'codec-server' as const;
 
 export const Strings = {
   'info-message':
-    'Users can use this Namespace-level codec server endpoint or override it in their browser with another endpoint.',
-  'endpoint-description-prefix': 'Enter a ',
-  'endpoint-link-text': 'Codec Server endpoint',
+    'Пользователи могут использовать этот endpoint кодек-сервера на уровне Namespace или переопределить его в браузере другим endpoint.',
+  'endpoint-description-prefix': 'Введите ',
+  'endpoint-link-text': 'endpoint кодек-сервера',
   'endpoint-description-suffix':
-    ' to decode payloads for users interacting with this Namespace',
-  'endpoint-label': 'Codec Server Endpoint',
+    ' для декодирования данных пользователей, взаимодействующих с этим Namespace',
+  'endpoint-label': 'Endpoint кодек-сервера',
   'endpoint-placeholder': 'https://your-codec-server.com/api/v1',
-  'pass-access-token-label': 'Pass User Access Token',
+  'pass-access-token-label': 'Передавать Access Token пользователя',
   'pass-access-token-description':
-    "Include the user's access token with requests to the codec server",
-  'cross-origin-credentials-label': 'Include Cross-Origin Credentials',
+    'Включать access token пользователя в запросы к кодек-серверу',
+  'cross-origin-credentials-label': 'Включить кросс-доменные учетные данные',
   'cross-origin-credentials-description':
-    'Include credentials when making cross-origin requests to the codec server',
+    'Включать учетные данные при выполнении кросс-доменных запросов к кодек-серверу',
   'custom-section-description':
-    'Optionally customize the error message and provide a redirect link for users when the Codec Server fails.',
-  'add-custom-button': 'Add Custom Message and Link',
-  'custom-message-label': 'Custom Error Message',
-  'custom-message-placeholder': 'Enter custom error message...',
-  'custom-link-label': 'Custom Error Link',
+    'Опционально настройте сообщение об ошибке и ссылку для перенаправления пользователей при сбое кодек-сервера.',
+  'add-custom-button': 'Добавить пользовательское сообщение и ссылку',
+  'custom-message-label': 'Пользовательское сообщение об ошибке',
+  'custom-message-placeholder':
+    'Введите пользовательское сообщение об ошибке...',
+  'custom-link-label': 'Пользовательская ссылка ошибки',
   'custom-link-placeholder': 'https://your-help-docs.com/codec-errors',
   'custom-link-description':
-    'Only include trusted links. This URL will be visible to end users and should point to a secure destination in case of Codec Server failure.',
-  'remove-custom-button': 'Remove Custom Message and Link',
-  'validation-error-title': 'Validation Error',
-  'validation-endpoint-required': 'Endpoint is required',
-  'validation-endpoint-url': 'Please enter a valid URL',
-  'validation-custom-link-url': 'Please enter a valid URL',
-  'save-button': 'Save',
-  'saving-button': 'Saving...',
-  'cancel-button': 'Cancel',
-  'save-success': 'Codec server configuration saved successfully',
-  'load-error-title': 'Failed to load codec server settings',
-};
+    'Используйте только доверенные ссылки. Этот URL будет виден конечным пользователям и должен вести на защищённый ресурс на случай сбоя кодек-сервера.',
+  'remove-custom-button': 'Удалить пользовательское сообщение и ссылку',
+  'validation-error-title': 'Ошибка проверки',
+  'validation-endpoint-required': 'Требуется endpoint',
+  'validation-endpoint-url': 'Пожалуйста, введите корректный URL',
+  'validation-custom-link-url': 'Пожалуйста, введите корректный URL',
+  'save-button': 'Сохранить',
+  'saving-button': 'Сохранение...',
+  'cancel-button': 'Отмена',
+  'save-success': 'Конфигурация кодек-сервера успешно сохранена',
+  'load-error-title': 'Не удалось загрузить настройки кодек-сервера',
+} as const;

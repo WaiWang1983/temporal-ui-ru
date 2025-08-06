@@ -1,30 +1,32 @@
 export const Namespace = 'data-encoder' as const;
 
 export const Strings = {
-  'codec-server': 'Codec Server',
-  'endpoint-title': 'Codec Server browser endpoint',
+  'codec-server': 'Codec сервер',
+  'endpoint-title': 'Точка доступа Codec сервера для браузера',
   'endpoint-description':
-    'Enter a Codec Server endpoint for this browser. This will be stored in your browser and will only be accessible by you.',
-  'endpoint-placeholder': 'Paste your endpoint here',
-  'pass-access-token-label': 'Pass the user access token',
-  'include-cross-origin-credentials-label': 'Include cross-origin credentials',
+    'Введите точку доступа Codec сервера для этого браузера. Она будет сохранена в вашем браузере и доступна только вам.',
+  'endpoint-placeholder': 'Вставьте здесь вашу точку доступа',
+  'pass-access-token-label': 'Передавать токен доступа пользователя',
+  'include-cross-origin-credentials-label':
+    'Включить кросс-доменные учетные данные',
   'include-cross-origin-credentials-warning':
-    'Warning: Pre-flight checks will be done and could result in failure to decode if incorrectly configured.',
-  'port-title': 'tctl plugin port ',
-  'port-info': 'If both are set, the Codec Server endpoint will be used.',
+    'Внимание: будут выполнены предварительные проверки, и при неправильной настройке это может привести к ошибке декодирования.',
+  'port-title': 'Порт плагина tctl',
+  'port-info':
+    'Если оба параметра заданы, будет использоваться точка доступа Codec сервера.',
   'access-token-https-error':
-    'Endpoint must be https:// if passing access token',
-  'prefix-error': 'Endpoint must start with http:// or https://',
-  'codec-server-description-prefix': 'A ',
+    'Точка доступа должна начинаться с https:// при передаче токена доступа',
+  'prefix-error': 'Точка доступа должна начинаться с http:// или https://',
+  'codec-server-description-prefix': 'Сервер ',
   'codec-server-description-suffix':
-    ' decodes your data. A Codec Server endpoint can be set at the {{level}} level, or locally in your browser.',
+    ' декодирует ваши данные. Точку доступа Codec сервера можно задать на уровне {{level}} или локально в вашем браузере.',
   'browser-override-description':
-    'Use my browser setting and ignore {{level}}-level setting.',
+    'Использовать настройки моего браузера и игнорировать настройки уровня {{level}}.',
   'no-browser-override-description':
-    'Use {{level}}-level setting, where available.',
-  'codec-server-configured': 'Codec Server is configured',
-  'codec-server-error': 'Codec Server could not connect',
-  'codec-server-success': 'Codec Server succesfully converted content',
-  'configure-codec-server': 'Configure Codec Server',
-  'encode-error': 'Codec Server failed to encode',
+    'Использовать настройки уровня {{level}}, если они доступны.',
+  'codec-server-configured': 'Codec сервер настроен',
+  'codec-server-error': 'Не удалось подключиться к Codec серверу',
+  'codec-server-success': 'Codec сервер успешно преобразовал содержимое',
+  'configure-codec-server': 'Настроить Codec сервер',
+  'encode-error': 'Codec сервер не смог выполнить кодирование',
 } as const;

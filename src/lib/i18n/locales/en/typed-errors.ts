@@ -1,188 +1,188 @@
 export const Namespace = 'typed-errors';
 
 export const Strings = {
-  'link-preface': 'Learn more about ',
+  'link-preface': 'Узнайте больше о ',
   Unspecified: {
-    title: 'Unspecified',
-    description: 'The Workflow Task failed. See error for details.',
+    title: 'Неуточнено',
+    description:
+      'Задача Workflow завершилась с ошибкой. Подробнее в сообщении об ошибке.',
   },
   UnhandledCommand: {
-    title: 'Unhandled Command',
+    title: 'Необработанная команда',
     description:
-      'The Workflow Task failed because there are new available events since the last Workflow Task started. A retry Workflow Task has been scheduled and the Workflow will have a chance to handle those new events.',
+      'Задача Workflow завершилась с ошибкой из-за появления новых событий после старта последней задачи Workflow. Запланирована повторная задача Workflow для обработки этих событий.',
   },
   BadScheduleActivityAttributes: {
-    title: 'Bad Schedule Activity Attributes',
+    title: 'Неверные атрибуты Schedule Activity',
     description:
-      'The Workflow Task failed because of missing or incorrect ScheduleActivity attributes.',
+      'Задача Workflow завершилась с ошибкой из-за отсутствия или некорректных атрибутов ScheduleActivity.',
   },
   BadRequestCancelActivityAttributes: {
-    title: 'Bad Request Cancel Activity Attributes',
+    title: 'Неверные атрибуты Request Cancel Activity',
     description:
-      'The Workflow Task failed because of bad RequestCancelActivity attributes. An Activity was scheduled to cancel, but the scheduled event id was never set.',
+      'Задача Workflow завершилась с ошибкой из-за некорректных атрибутов RequestCancelActivity. Активность была запланирована на отмену, но id события отмены не был установлен.',
   },
   BadStartTimerAttributes: {
-    title: 'Bad Start Timer Attributes',
+    title: 'Неверные атрибуты Start Timer',
     description:
-      'The Workflow Task failed because the scheduled event is missing a timer id.',
+      'Задача Workflow завершилась с ошибкой из-за отсутствия id таймера в запланированном событии.',
   },
   BadCancelTimerAttributes: {
-    title: 'Bad Cancel Timer Attributes',
+    title: 'Неверные атрибуты Cancel Timer',
     description:
-      'The Workflow Task failed when trying to cancel a timer due to an unset timer id.',
+      'Задача Workflow завершилась с ошибкой при попытке отмены таймера из-за отсутствия id таймера.',
   },
   BadRecordMarkerAttributes: {
-    title: 'Bad Record Marker Attributes',
+    title: 'Неверные атрибуты Record Marker',
     description:
-      'The Workflow Task failed because of a missing or invalid Marker name.',
+      'Задача Workflow завершилась с ошибкой из-за отсутствия или некорректного имени Marker.',
   },
   BadCompleteWorkflowExecutionAttributes: {
-    title: 'Bad Complete Workflow Execution Attributes',
+    title: 'Неверные атрибуты Complete Workflow Execution',
     description:
-      'The Workflow Task failed because of an unset attribute on CompleteWorkflowExecution.',
+      'Задача Workflow завершилась с ошибкой из-за отсутствия атрибута CompleteWorkflowExecution.',
   },
   BadFailWorkflowExecutionAttributes: {
-    title: 'Bad Fail Workflow Execution Attributes',
+    title: 'Неверные атрибуты Fail Workflow Execution',
     description:
-      'The Workflow Task failed because of an unset FailWorkflowExecution attribute or failure.',
+      'Задача Workflow завершилась с ошибкой из-за отсутствия атрибута FailWorkflowExecution или ошибки failure.',
   },
   BadCancelWorkflowExecutionAttributes: {
-    title: 'Bad Cancel Workflow Execution Attributes',
+    title: 'Неверные атрибуты Cancel Workflow Execution',
     description:
-      'The Workflow Task failed because of an unset attribute on CancelWorkflowExecution.',
+      'Задача Workflow завершилась с ошибкой из-за отсутствия атрибута CancelWorkflowExecution.',
   },
   BadRequestCancelExternalAttributes: {
-    title: 'Bad Request Cancel External Attributes',
+    title: 'Неверные атрибуты Request Cancel External',
     description:
-      'The Workflow Task failed due to an invalid attribute on a request to cancel an external Workflow. Check the Failure Message for more details.',
+      'Задача Workflow завершилась с ошибкой из-за некорректного атрибута запроса на отмену внешнего Workflow. Подробнее в сообщении об ошибке.',
   },
   BadContinueAsNewAttributes: {
-    title: 'Bad Continue As New Attributes',
+    title: 'Неверные атрибуты Continue As New',
     description:
-      'The Workflow Task failed because it failed to validate on a ContinueAsNew attribute. Check the Failure Message for more details.',
+      'Задача Workflow завершилась с ошибкой из-за ошибки валидации атрибута ContinueAsNew. Подробнее в сообщении об ошибке.',
   },
   StartTimerDuplicateId: {
-    title: 'Start Timer Duplicate ID',
+    title: 'Дубликат ID для Start Timer',
     description:
-      'The Workflow Task failed because a timer with the given timer id has already started.',
+      'Задача Workflow завершилась с ошибкой, так как таймер с данным id уже запущен.',
   },
   ResetStickyTaskQueue: {
-    title: 'Reset Sticky Task Queue',
+    title: 'Сброс Sticky Task Queue',
     description:
-      'The Workflow Task failed because the Sticky Task Queue needs to be reset. The system will automatically retry.',
+      'Задача Workflow завершилась с ошибкой из-за необходимости сброса Sticky Task Queue. Система автоматически выполнит повтор.',
   },
   WorkflowWorkerUnhandledFailure: {
-    title: 'Workflow Worker Unhandled Failure',
+    title: 'Необработанная ошибка Workflow Worker',
     description:
-      'The Workflow Task failed due to an unhandled failure from the Workflow code.',
-    action: 'deterministic constraints',
+      'Задача Workflow завершилась с ошибкой из-за необработанной ошибки в коде Workflow.',
+    action: 'детерминированные ограничения',
     link: 'https://docs.temporal.io/workflows/#deterministic-constraints',
   },
   WorkflowTaskHeartbeatError: {
-    title: 'Workflow Task Heartbeat Error',
+    title: 'Ошибка Heartbeat задачи Workflow',
     description:
-      'The Workflow Task failed to send a heartbeat while executing long-running local Activities. These local Activities will re-execute on the next Workflow Task attempt. If this error is persistent, these local Activities will run repeatedly until the Workflow times out.',
+      'Задача Workflow не смогла отправить heartbeat при выполнении длительных локальных активностей. Эти активности будут выполнены повторно при следующей задаче Workflow. При постоянной ошибке активности будут повторяться до тайм-аута Workflow.',
   },
   BadSignalWorkflowExecutionAttributes: {
-    title: 'Bad Signal Workflow Execution Attributes',
+    title: 'Неверные атрибуты Signal Workflow Execution',
     description:
-      'The Workflow Task failed to validate attributes for SignalWorkflowExecution. Check the Failure Message for more details.',
+      'Задача Workflow не прошла валидацию атрибутов SignalWorkflowExecution. Подробнее в сообщении об ошибке.',
   },
   BadStartChildExecutionAttributes: {
-    title: 'Bad Start Child Execution Attributes',
+    title: 'Неверные атрибуты Start Child Execution',
     description:
-      'The Workflow Task failed to validate attributes needed for StartChildWorkflowExecution. Check the Failure Message for more details.',
+      'Задача Workflow не прошла валидацию атрибутов StartChildWorkflowExecution. Подробнее в сообщении об ошибке.',
   },
   ForceCloseCommand: {
-    title: 'Force Close Command',
+    title: 'Принудительное закрытие команды',
     description:
-      'The Workflow Task was forced to close. A retry will be scheduled if the error is recoverable.',
+      'Задача Workflow была принудительно закрыта. При восстановимой ошибке будет запланирован повтор.',
   },
   FailoverCloseCommand: {
-    title: 'Failover Close Command',
+    title: 'Закрытие из-за Failover',
     description:
-      'The Workflow Task was forced to close due to a Namespace failover. A retry will be scheduled automatically.',
+      'Задача Workflow была принудительно закрыта из-за failover пространства имён. Повтор будет запланирован автоматически.',
   },
   BadSignalInputSize: {
-    title: 'Bad Signal Input Size',
-    description:
-      'The payload has exceeded the available input size on a Signal.',
+    title: 'Неверный размер входных данных сигнала',
+    description: 'Размер полезной нагрузки сигнала превысил допустимый лимит.',
   },
   BadBinary: {
-    title: 'Bad Binary',
+    title: 'Плохой бинарник',
     description:
-      'The system failed this Workflow Task because the deployment of this Worker is marked as bad binary.',
+      'Система отклонила задачу Workflow, так как версия Worker помечена как плохая (bad binary).',
   },
   ScheduleActivityDuplicateId: {
-    title: 'Schedule Activity Duplicate ID',
+    title: 'Дубликат ID для Schedule Activity',
     description:
-      'The Workflow Task failed because the Activity ID is already in use, please check if you have specified the same Activity ID in your workflow.',
+      'Задача Workflow завершилась с ошибкой, так как Activity ID уже используется. Проверьте, не указали ли вы одинаковые Activity ID в workflow.',
   },
   BadSearchAttributes: {
-    title: 'Bad Search Attributes',
+    title: 'Неверные атрибуты поиска',
     description:
-      'A Search attribute is either missing or the value exceeds the limit. This might cause Workflow tasks to continue to retry without success.',
-    action: 'configuring search attributes',
+      'Отсутствует атрибут поиска или его значение превышает лимит. Это может привести к бесконечным повторным попыткам выполнения задачи Workflow.',
+    action: 'настройка атрибутов поиска',
     link: 'https://docs.temporal.io/visibility#search-attribute',
   },
   NonDeterministicError: {
-    title: 'Non Deterministic Error',
+    title: 'Недетерминированная ошибка',
     description:
-      'A non-deterministic error has caused the Workflow Task to fail. This usually means the workflow code has a non-backward compatible change without a proper versioning branch.',
+      'Ошибка недетерминированности вызвала сбой задачи Workflow. Обычно это означает несовместимое изменение кода workflow без правильной версии/ветвления.',
   },
   BadModifyWorkflowPropertiesAttributes: {
-    title: 'Bad Modify Workflow Properties Attributes',
+    title: 'Неверные атрибуты Modify Workflow Properties',
     description:
-      'The Workflow Task failed to validate attributes on ModifyWorkflowProperty on the upsert memo. Check the Failure Message for more details.',
+      'Задача Workflow не прошла валидацию атрибутов ModifyWorkflowProperty в upsert memo. Подробнее в сообщении об ошибке.',
   },
   PendingChildWorkflowsLimitExceeded: {
-    title: 'Pending Child Workflows Limit Exceeded',
+    title: 'Превышен лимит ожидающих дочерних Workflow',
     description:
-      'The capacity for pending child Workflows has been reached. The Workflow Task was failed to prevent any more child Workflows from being added.',
+      'Достигнута максимальная вместимость ожидающих дочерних Workflow. Задача Workflow завершена, чтобы предотвратить добавление новых.',
   },
   PendingActivitiesLimitExceeded: {
-    title: 'Pending Activities Limit Exceeded',
+    title: 'Превышен лимит ожидающих активностей',
     description:
-      'The capacity for pending Activities has been reached. The Workflow Task was failed to prevent another Activity from being created.',
+      'Достигнута максимальная вместимость ожидающих активностей. Задача Workflow завершена, чтобы предотвратить создание новых.',
   },
   PendingSignalsLimitExceeded: {
-    title: 'Pending Signals Limit Exceeded',
+    title: 'Превышен лимит ожидающих сигналов',
     description:
-      'The capacity for pending Signals to be sent from this Workflow has been reached.',
+      'Достигнута максимальная вместимость ожидающих сигналов, которые должны быть отправлены из этого Workflow.',
   },
   PendingRequestCancelLimitExceeded: {
-    title: 'Pending Request Cancel Limit Exceeded',
+    title: 'Превышен лимит ожидающих запросов на отмену',
     description:
-      'The capacity for pending requests to cancel other Workflows has been reached.',
+      'Достигнута максимальная вместимость ожидающих запросов на отмену других Workflow.',
   },
   BadUpdateWorkflowExecutionMessage: {
-    title: 'Bad Update',
+    title: 'Неверное обновление',
     description:
-      'A Workflow Execution tried to complete before receiving an Update.',
+      'Workflow Execution пытался завершиться до получения обновления.',
   },
   UnhandledUpdate: {
-    title: 'Unhandled Update',
+    title: 'Необработанное обновление',
     description:
-      'A Workflow Update was received by the Temporal Server while a Workflow Task was being processed on a Worker.',
+      'Обновление Workflow было получено Temporal Server во время обработки задачи Workflow на Worker.',
   },
   BadScheduleNexusOperationAttributes: {
-    title: 'Bad Schedule Nexus Operation Attributes',
+    title: 'Неверные атрибуты Schedule Nexus Operation',
     description:
-      'A workflow task completed with an invalid ScheduleNexusOperation command.',
+      'Задача Workflow завершилась с ошибкой из-за недопустимой команды ScheduleNexusOperation.',
   },
   PendingNexusOperationsLimitExceeded: {
-    title: 'Pending Nexus Operations Limit Exceeded',
+    title: 'Превышен лимит ожидающих операций Nexus',
     description:
-      'A workflow task completed requesting to schedule a Nexus Operation exceeding the server configured limit.',
+      'Задача Workflow завершилась с ошибкой из-за запроса на планирование операции Nexus, превышающего лимит, заданный сервером.',
   },
   BadRequestCancelNexusOperationAttributes: {
-    title: 'Bad Request Cancel Nexus Operation Attributes',
+    title: 'Неверные атрибуты Request Cancel Nexus Operation',
     description:
-      'A workflow task completed with an invalid RequestCancelNexusOperation command.',
+      'Задача Workflow завершилась с ошибкой из-за недопустимой команды RequestCancelNexusOperation.',
   },
   FeatureDisabled: {
-    title: 'Feature Disabled',
+    title: 'Функция отключена',
     description:
-      "A workflow task completed requesting a feature that's disabled on the server (either system wide or - typically - for the workflow's namespace). Check the workflow task failure message for more information.",
+      'Задача Workflow завершилась с ошибкой из-за запроса функции, которая отключена на сервере (для всей системы или для пространства имён workflow). Подробнее в сообщении об ошибке.',
   },
 } as const;

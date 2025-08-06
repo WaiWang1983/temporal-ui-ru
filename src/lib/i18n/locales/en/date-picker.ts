@@ -1,6 +1,6 @@
 export const Namespace = 'date-picker' as const;
 
 export const Strings = {
-  'next-month': 'Next Month',
-  'previous-month': 'Previous Month',
+  'next-month': 'Следующий месяц',
+  'previous-month': 'Предыдущий месяц',
 } as const;

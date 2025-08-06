@@ -1,19 +1,20 @@
 export const Namespace = 'activities' as const;
 
 export const Strings = {
-  'pause-modal-confirmation': 'Pause Activity {{activityId}}',
-  'pause-modal-description': 'Pause executing this Activity.',
-  'unpause-modal-confirmation': 'Unpause Activity {{activityId}}',
-  'unpause-modal-description': 'Resume executing this Activity.',
-  'paused-since': 'Paused Since',
-  'paused-by': 'Paused By',
-  'pause-reason': 'Paused Reason',
-  'reset-modal-confirmation': 'Reset Activity {{activityId}}',
+  'pause-modal-confirmation': 'Поставить на паузу активность {{activityId}}',
+  'pause-modal-description': 'Приостановить выполнение этой активности.',
+  'unpause-modal-confirmation': 'Снять паузу с активности {{activityId}}',
+  'unpause-modal-description': 'Возобновить выполнение этой активности.',
+  'paused-since': 'Пауза с',
+  'paused-by': 'Поставлено на паузу пользователем',
+  'pause-reason': 'Причина паузы',
+  'reset-modal-confirmation': 'Сбросить активность {{activityId}}',
   'reset-modal-description':
-    'Reset the execution of this Activity back to the initial attempt.',
-  'apply-to-all-activity-types': 'Apply changes to all {{type}} runs',
-  'pause-all-activity-types': 'Pause all {{type}} runs',
-  'unpause-all-activity-types': 'Unpause all {{type}} runs',
-  'reset-heartbeat-details': 'Reset Heartbeat Details (optional)',
-  'reset-success': 'Activity {{activityId}} has been reset successfully.',
-};
+    'Сбросить выполнение этой активности до первоначальной попытки.',
+  'apply-to-all-activity-types':
+    'Применить изменения ко всем запускам {{type}}',
+  'pause-all-activity-types': 'Поставить на паузу все запуски {{type}}',
+  'unpause-all-activity-types': 'Снять паузу со всех запусков {{type}}',
+  'reset-heartbeat-details': 'Сбросить детали heartbeat (необязательно)',
+  'reset-success': 'Активность {{activityId}} успешно сброшена.',
+} as const;

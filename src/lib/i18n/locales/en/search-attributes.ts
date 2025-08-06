@@ -1,44 +1,44 @@
 export const Namespace = 'search-attributes' as const;
 
 export const Strings = {
-  // Component headers and labels
-  'column-attribute': 'Attribute',
-  'column-type': 'Type',
-  'attribute-label': 'Attribute {{index}}',
-  'type-label': 'Type for Attribute {{index}}',
-  'select-type-placeholder': 'Select type',
+  // Заголовки компонентов и метки
+  'column-attribute': 'Атрибут',
+  'column-type': 'Тип',
+  'attribute-label': 'Атрибут {{index}}',
+  'type-label': 'Тип для атрибута {{index}}',
+  'select-type-placeholder': 'Выберите тип',
 
-  // Buttons
-  'add-attribute-button': 'Add New Custom Search Attribute',
-  'save-button': 'Save',
-  'saving-button': 'Saving...',
-  'cancel-button': 'Cancel',
+  // Кнопки
+  'add-attribute-button': 'Добавить новый пользовательский атрибут поиска',
+  'save-button': 'Сохранить',
+  'saving-button': 'Сохранение...',
+  'cancel-button': 'Отмена',
 
-  // Messages
-  'validation-error-title': 'Validation Error',
-  'save-success': 'Search attributes saved successfully',
-  'save-error': 'Failed to save search attributes',
-  'save-error-generic': 'An error occurred while saving search attributes',
-  'load-error-title': 'Failed to Load Search Attributes',
-  'error-title': 'Error',
+  // Сообщения
+  'validation-error-title': 'Ошибка валидации',
+  'save-success': 'Атрибуты поиска успешно сохранены',
+  'save-error': 'Не удалось сохранить атрибуты поиска',
+  'save-error-generic': 'Произошла ошибка при сохранении атрибутов поиска',
+  'load-error-title': 'Не удалось загрузить атрибуты поиска',
+  'error-title': 'Ошибка',
 
-  // Validation messages
-  'validation-name-required': 'Attribute name is required',
-  'validation-names-unique': 'Attribute names must be unique',
+  // Сообщения валидации
+  'validation-name-required': 'Требуется имя атрибута',
+  'validation-names-unique': 'Имена атрибутов должны быть уникальными',
 
-  // Development messages
+  // Сообщения для разработчиков
   'crud-not-implemented':
-    'CRUD operations will be implemented when SDK team adds endpoints',
+    'Операции CRUD будут реализованы, когда команда SDK добавит конечные точки',
 
-  // Type labels
-  'type-keyword': 'Keyword',
-  'type-text': 'Text',
-  'type-int': 'Int',
-  'type-double': 'Double',
-  'type-bool': 'Bool',
-  'type-datetime': 'DateTime',
-  'type-keywordlist': 'KeywordList',
+  // Метки типов
+  'type-keyword': 'Ключевое слово',
+  'type-text': 'Текст',
+  'type-int': 'Целое число',
+  'type-double': 'Дробное число',
+  'type-bool': 'Булево значение',
+  'type-datetime': 'Дата и время',
+  'type-keywordlist': 'Список ключевых слов',
 
-  // Story titles
-  'story-title': 'Custom Search Attributes for {{namespace}}',
+  // Заголовки историй (stories)
+  'story-title': 'Пользовательские атрибуты поиска для {{namespace}}',
 } as const;
